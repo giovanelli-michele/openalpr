@@ -3,6 +3,10 @@
 #define OPENALPR_MOTIONDETECTOR_H
 
 #include "opencv2/opencv.hpp"
+
+// Aggiunto per OPENcv 4
+#include "opencv2/imgproc/types_c.h"
+
 #include "utility.h"
 
 namespace alpr

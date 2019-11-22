@@ -27,6 +27,9 @@
 #include "opencv2/core/core.hpp"
 #include "opencv2/ml/ml.hpp"
 
+// Aggiunto per OpenCV 4.0
+#include "opencv2/imgproc/types_c.h"
+
 #include "detector.h"
 
 namespace alpr {

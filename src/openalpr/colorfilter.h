@@ -23,6 +23,9 @@
 #include <iomanip>
 #include "opencv2/imgproc/imgproc.hpp"
 
+// Aggiunto per OPENcv 4
+#include "opencv2/imgproc/types_c.h"
+
 #include "constants.h"
 #include "utility.h"
 #include "config.h"

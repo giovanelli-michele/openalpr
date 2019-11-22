@@ -23,6 +23,10 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "pipeline_data.h"
 #include "transformation.h"
+
+// Aggiunto per OPENcv 4
+#include "opencv2/imgproc/types_c.h"
+
 #include "platelines.h"
 #include "platecorners.h"
 

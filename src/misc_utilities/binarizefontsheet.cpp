@@ -20,6 +20,10 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
+
+// Aggiunto per OPENcv 4
+#include "opencv2/imgproc/types_c.h"
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -71,7 +75,7 @@ bool sort_lined_rectangles(Rect i, Rect j) {
 void show_debug_image(vector<Rect> rectangles, Mat img)
 {
     Mat debugImg;
-    cvtColor(img, debugImg, CV_GRAY2BGR);
+    cvtColor(img, debugImg, COLOR_GRAY2BGR);
     for (unsigned int i = 0; i < rectangles.size(); i++)
     {
       Rect mr = rectangles[i];
@@ -172,7 +176,7 @@ int main(int argc, char** argv) {
 
     Config config("us");
     
-    cvtColor(frame, frame, CV_BGR2GRAY);
+    cvtColor(frame, frame, COLOR_BGR2GRAY);
     vector<Mat> thresholds = produceThresholds(frame, &config);
     
     
@@ -195,8 +199,8 @@ int main(int argc, char** argv) {
 
         if (speckleRect.area() < MIN_SPECKLE_AREA_PIXELS)
         {
-          drawContours(thresholds[t], speckle_contours, i, Scalar(0,0,0), CV_FILLED);
-          drawContours(testImg, speckle_contours, i, Scalar(255,255,255), CV_FILLED);
+          drawContours(thresholds[t], speckle_contours, i, Scalar(0,0,0), FILLED);
+          drawContours(testImg, speckle_contours, i, Scalar(255,255,255), FILLED);
         }
       }
       resize(testImg, testImg, Size(700, 1000));

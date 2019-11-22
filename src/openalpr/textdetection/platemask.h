@@ -21,6 +21,10 @@
 #define	OPENALPR_PLATEMASK_H
 
 #include "opencv2/imgproc/imgproc.hpp"
+
+// Aggiunto per OPENcv 4
+#include "opencv2/imgproc/types_c.h"
+
 #include "pipeline_data.h"
 #include "textcontours.h"
 

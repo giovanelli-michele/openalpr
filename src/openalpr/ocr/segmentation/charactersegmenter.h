@@ -27,6 +27,9 @@
 #include "histogramvertical.h"
 #include "config.h"
 #include "textdetection/textcontours.h"
+
+#include "opencv2/imgproc/types_c.h"
+
 #include "pipeline_data.h"
 
 namespace alpr
